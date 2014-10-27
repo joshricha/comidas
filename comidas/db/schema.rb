@@ -32,13 +32,9 @@ ActiveRecord::Schema.define(version: 20141026234202) do
 
   create_table "plans", force: true do |t|
     t.integer  "user_id"
+    t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "plans_recipes", id: false, force: true do |t|
-    t.integer "plan_id",   null: false
-    t.integer "recipe_id", null: false
   end
 
   create_table "recipes", force: true do |t|

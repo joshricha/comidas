@@ -1,0 +1,5 @@
+<h1>Your Meal Plan: </h1>
+
+<% @plans.each { |plan| %>
+<p><%= plan.recipe.name %></p>
+<% } %>

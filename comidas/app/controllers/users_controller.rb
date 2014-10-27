@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new
     @user.name = params[:username]
-    @user.password_digest = params[:password]
+    @user.password = params[:password]
     @user.email = params[:email]
       if @user.save
         session[:user_id] = @user.id
