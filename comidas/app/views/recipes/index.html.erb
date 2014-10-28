@@ -1,7 +1,16 @@
 <h1>Recipes</h1>
 
+<% binding.pry %>
+<p><%= link_to 'Your Current Plans', plans_path %></p>
+
+<%= link_to 'all', '/recipes/?meal_type=all' %>
+<%= link_to 'breakfast', '/recipes/?meal_type=breakfast' %>
+<%= link_to 'lunch', '/recipes/?meal_type=lunch' %>
+<%= link_to 'dinner', '/recipes/?meal_type=dinner' %>
+
 <% @recipes.each do |recipe| %>
 <h2><%= recipe.name %></h2>
+  <img src="<%= recipe.image_url %>" alt="">
   <p>Calories: <%= recipe.calories %></p>
   <p><%= link_to 'add', recipe %></p>
 <% end %>
