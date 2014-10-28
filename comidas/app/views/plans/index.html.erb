@@ -14,4 +14,12 @@
 
 <h4>Over <%= total_meals %> Meals</h4>
 
-<h2>Average Calories Per Meal: <%= total_calories / total_meals %></h2>
+<h2>Average Calories Per Meal: </h2>
+  <% if total_meals == 0 %>
+      <%= link_to 'Add Recipes', root_path %>
+    <% else %>
+      <h2><%= total_calories / total_meals %></h2>
+  <% end %>
+
+<%= link_to 'View Shopping List', shopping_lists_path %>
+<a href="">Print shopping list</a>

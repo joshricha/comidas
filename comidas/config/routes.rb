@@ -9,10 +9,12 @@ Rails.application.routes.draw do
   get '/sign_up' => 'users#new'
   post '/sign_up' => 'users#create'
 
+  get 'shopping_list' => 'shopping_list/index'
+
   # check if these are needed anymore
   get '/recipes/:id' => 'recipes#add'
   post '/recipes/:id' => 'recipes#add'
 
-  resources :recipes, :users, :plans
+  resources :recipes, :users, :plans, :shopping_lists
 
 end
