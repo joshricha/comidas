@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
   # method to add the recipe to the users meal plan
   def add
 
-    if logged_in?
+    if user_signed_in?
 
       # finds the recipe which has been clicked to be added
       recipe = Recipe.find(params[:id])

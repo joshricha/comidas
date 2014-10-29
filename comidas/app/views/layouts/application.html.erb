@@ -8,11 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
-
-<% if logged_in? %>
-<footer><%= link_to 'Logout', logout_path  %></footer>
-<% end %>
+   <div id="main-container" class="container">
+      <div class="row">
+        <div id="content" class="col-xs-12">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="row">
+          <% if user_signed_in? %>
+          <footer><%= link_to 'Logout', destroy_user_session_path, :method => :delete  %></footer>
+          <% end %>
+      </div>
+    </div>
 
 </body>
 </html>

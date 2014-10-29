@@ -1,16 +1,9 @@
-<h1>Shopping List</h1>
-<%= current_user.id %>
+<h1>Shopping List: </h1>
 
-<%## @plans.each do |plan| %>
-  <%# i = plan.recipe.ingredients.order(:name) %>
-    <%# i.each do |ingredient| %>
-
-      <p><%#= ingredient.name %> Amount: </p>
-    <%# end %>
-<%# end %>
+<p>(grams)</p>
 
 <hr>
 
 <% @plans.each do |i|%>
   <p><%= i['name'] %>  <%= i['sum'] %></p>
-  <% end %>
+<% end %>
