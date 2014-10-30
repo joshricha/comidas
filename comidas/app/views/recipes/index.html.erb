@@ -1,3 +1,17 @@
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="row">
+
+    </div>
+
+    <div class="row">
+      <a href="#">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="row">
 
   <h1>Recipes</h1>
@@ -12,8 +26,8 @@
 </div>
 
 <% @recipes.each do |recipe| %>
-<div id="content" class="col-xs-3">
-  <h2><%= recipe.name %></h2>
+<div id="content" class="col-md-4">
+  <h2 class="food"><%= recipe.name %></h2>
     <img src="<%= recipe.image_url %>" alt="">
     <p>Calories: <%= recipe.calories %></p>
     <p><%= link_to 'add', recipe %></p>
