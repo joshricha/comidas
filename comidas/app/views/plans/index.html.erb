@@ -1,0 +1,32 @@
+<div id="main-container" class="container">
+  <div class="row">
+    <div id="content" class="col-xs-12">
+      <h1>Your Meal Plan: </h1>
+
+      <% total_calories = 0 %>
+      <% total_meals = 0 %>
+
+      <% @plans.each { |plan| %>
+      <h3><%= plan.recipe.name %></h3>
+      <p>Calories: <%= plan.recipe.calories %></p>
+      <% total_calories += plan.recipe.calories %>
+      <% total_meals += 1 %>
+      <% } %>
+
+      <h3>Total Calories: <%= total_calories %></h3>
+
+      <h4>Over <%= total_meals %> Meals</h4>
+
+        <% if total_meals == 0 %>
+            <%= link_to 'Add Recipes', root_path %>
+        <% else %>
+            <h2>Average Calories Per Meal: <%= total_calories / total_meals %></h2>
+            <%= link_to 'Add More Recipes', root_path %>
+        <% end %>
+
+
+      <%= link_to 'View Shopping List', shopping_lists_path %>
+      <a href="">Print shopping list</a>
+    </div>
+  </div>
+</div>
