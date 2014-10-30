@@ -1,4 +1,5 @@
 class ShoppingListsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def index
     @ingredients = current_user.plans.joins(:recipe => :ingredients)

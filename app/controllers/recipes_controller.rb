@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-
+  skip_before_action :authenticate_user!
 
   def index
     if params[:meal_type] == "breakfast"
@@ -28,7 +28,7 @@ class RecipesController < ApplicationController
       redirect_to '/'
 
     else
-      authenticate
+      redirect_to new_user_registration_path
     end
   end
 
