@@ -9,13 +9,12 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center">
-          <%= link_to 'Sign In', user_session_path, class: "btn btn-outline" %>
+          <%= link_to 'Sign In', new_user_session_path, class: "btn btn-outline" %>
         </div>
       </div>
     </div>
   </section>
 </header>
-
    <div id="main-container" class="container">
       <div class="row">
         <div id="content" class="col-xs-12">
@@ -29,9 +28,7 @@
             <%= link_to 'breakfast', '/recipes/?meal_type=breakfast', class: "btn btn-default" %>
             <%= link_to 'lunch', '/recipes/?meal_type=lunch', class: "btn btn-default" %>
             <%= link_to 'dinner', '/recipes/?meal_type=dinner', class: "btn btn-default" %>
-
           </div>
-
           <% @recipes.each do |recipe| %>
           <div id="content" class="col-md-4">
             <h2 class="food"><%= recipe.name %></h2>
@@ -39,7 +36,7 @@
               <p>Calories: <%= recipe.calories %></p>
               <p><%= link_to 'add', recipe %></p>
           </div>
-            <% end %>
+          <% end %>
       </div>
     </div>
   </div>
