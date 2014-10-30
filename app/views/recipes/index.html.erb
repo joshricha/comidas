@@ -3,13 +3,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center inner">
-          <h1 class="white">Comidas</h1>
+          <h1 class="white logo">Comidas</h1>
           <h4 class="white">Diet Planner</h4>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center">
-          <%= link_to 'Sign In', new_user_session_path, class: "btn btn-outline" %>
+          <% if user_signed_in? %>
+          <% else %>
+            <%= link_to 'Sign In', new_user_session_path, class: "btn btn-outline" %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -33,8 +36,8 @@
           <div id="content" class="col-md-4">
             <h2 class="food"><%= recipe.name %></h2>
               <img src="<%= recipe.image_url %>" alt="">
-              <p>Calories: <%= recipe.calories %></p>
-              <p><%= link_to 'add', recipe %></p>
+              <p class="calories">Calories: <%= recipe.calories %></p>
+              <p><%= link_to 'ADD ', recipe %></p>
           </div>
           <% end %>
       </div>

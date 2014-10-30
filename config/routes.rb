@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   get 'shopping_list' => 'shopping_list/index'
 
-  # check if these are needed anymore
   get '/recipes/:id' => 'recipes#add'
   post '/recipes/:id' => 'recipes#add'
 
