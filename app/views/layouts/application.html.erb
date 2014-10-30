@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comidas: Meal & Shopping List Planner</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="http://localhost:3000/assets/style.css">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <%= yield %>
+
+    <div id="main-container" class="container">
+      <div class="row">
+        <div id="content" class="col-xs-12">
+          <div class="row">
+              <% if user_signed_in? %>
+              <footer>
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete  %>
+                <%= link_to 'Home', "/"  %>
+              </footer>
+              <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

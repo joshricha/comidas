@@ -1,0 +1,13 @@
+<div id="main-container" class="container">
+  <div class="row">
+    <div id="content" class="col-xs-12">
+      <h1>Shopping List: </h1>
+      <p>(grams)</p>
+      <hr>
+
+      <% @plans.each do |i|%>
+        <p><%= i['name'] %>  <%= i['sum'] %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
