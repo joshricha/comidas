@@ -18,8 +18,10 @@
           <div class="row">
               <% if user_signed_in? %>
               <footer>
-                <%= link_to 'Logout', destroy_user_session_path, :method => :delete  %>
-                <%= link_to 'Home', "/"  %>
+                <p class="footer">&copy; Comidas Food Planner
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: 'footer'  %>
+                <%= link_to 'Home', "/", class: "footer"  %>
+                </p>
               </footer>
               <% end %>
           </div>
