@@ -5,8 +5,8 @@
       <p>(grams/ml)</p>
       <hr>
 
-      <% @plans.each do |i|%>
-        <p><%= i['name'] %>  <%= i['sum'] %></p>
+      <% @plans.each do |ingredient|%>
+        <p><%= ingredient['name'] %>  <%= ingredient['sum'] %></p>
       <% end %>
     </div>
   </div>
