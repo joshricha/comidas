@@ -24,7 +24,7 @@ class RecipesController < ApplicationController
       # created a plan and adds the currents users id and recipe_id
       plan = Plan.create(user_id: current_user.id, recipe_id: recipe.id)
 
-      plan.save
+      # plan.save
       redirect_to '/'
 
     else

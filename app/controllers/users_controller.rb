@@ -9,15 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user.create(name = )
-    @user = User.new
-    @user.name = params[:username]
-    @user.password = params[:password]
-    @user.email = params[:email]
+    @user.create(name: params[:username], password: params[:password], email: params[:email])
       if @user.save
         session[:user_id] = @user.id
         redirect_to '/'
-        # redirect_to root_path
       else
         render :new
       end
