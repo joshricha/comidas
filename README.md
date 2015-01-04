@@ -7,7 +7,7 @@ Comidas is a meal and shopping list generator created to simplify your weekly sh
 
 ### Target Users:
 
-People who live a fast paced lifestyle and wish to minimise their time spent choosing meals every night and the confusion caused when shopping because of it.
+People who live a fast paced lifestyle and wish to minimise their time spent choosing meals every day and the confusion caused when shopping because of it.
 
 ### Technologies used:
 
