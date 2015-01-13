@@ -19,18 +19,11 @@
 #
 
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :plans
-  # attr_accessor :email, :password, :password_confirmation, :remember_me, :username, :provider, :uid, :avatar
-
 
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauth_providers => [:google_oauth2]
 
-  # attr_accessible :email, :password
-
-  # METHODS ---------------------------------------------
   def self.from_omniauth(auth)
     if user = User.find_by(:email => auth.info.email)
       user.provider = auth.provider
