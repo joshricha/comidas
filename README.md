@@ -3,7 +3,7 @@
 
 ## About
 
-Comidas is a meal and shopping list generator created to simplify your weekly shopping. You simply select your weekly meals from the Comidas database and we generate a shoppoing list and recipes for you for your own convenience.
+Comidas is a meal and shopping list generator created to simplify your weekly shopping. You simply select your weekly meals from the Comidas database and we generate a shopping list and recipes for you for your own convenience.
 
 ### Target Users:
 
