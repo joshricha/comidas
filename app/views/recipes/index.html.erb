@@ -34,12 +34,12 @@
             <%= link_to 'dinner', '/recipes/?meal_type=dinner', class: "btn btn-default" %>
           </div>
           <% @recipes.each do |recipe| %>
-          <div id="content" class="col-md-4">
-            <h2 class="food"><%= recipe.name %></h2>
-              <img src="<%= recipe.image_url %>" alt="">
-              <p class="calories">Calories: <%= recipe.calories %></p>
-              <p><a href="/recipes/<%= recipe.id %>" recipe_id="<%= recipe.id %>" class="add">ADD</a></p>
-          </div>
+            <div id="content" class="col-md-4">
+              <h2 class="food"><%= recipe.name %></h2>
+                <img src="<%= recipe.image_url %>" alt="">
+                <p class="calories">Calories: <%= recipe.calories %></p>
+                <p><a href="/recipes/<%= recipe.id %>" recipe_id="<%= recipe.id %>" class="add">ADD</a></p>
+            </div>
           <% end %>
       </div>
     </div>

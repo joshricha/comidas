@@ -4,36 +4,37 @@
       <a href="/">
         <img class ="logo-black" src="http://i.imgur.com/6RfQASd.png?1" alt="">
       </a>
+
       <h1>Your Meal Plans: </h1>
 
       <% total_calories = 0 %>
       <% total_meals = 0 %>
 
       <% @plans.each do |plan| %>
-      <h3><%= plan.recipe.name %></h3>
-      <% i = plan.recipe.instructions.split("//") %>
-      <% n = 1 %>
+        <h3><%= plan.recipe.name %></h3>
+        <% i = plan.recipe.instructions.split("//") %>
+        <% n = 1 %>
 
-      <% i.each do |instruction| %>
-      <p><%= "#{n}) #{instruction }" %></p>
-      <% n += 1 %>
-      <% end %>
-      <p><%= link_to 'DELETE', plan, :method => :delete  %></p>
-      <p>Calories: <%= plan.recipe.calories %></p>
-      <% total_calories += plan.recipe.calories %>
-      <% total_meals += 1 %>
+        <% i.each do |instruction| %>
+          <p><%= "#{n}) #{instruction }" %></p>
+          <% n += 1 %>
+        <% end %>
+        <p><%= link_to 'DELETE', plan, :method => :delete  %></p>
+        <p>Calories: <%= plan.recipe.calories %></p>
+        <% total_calories += plan.recipe.calories %>
+        <% total_meals += 1 %>
       <% end %>
 
       <h3>Total Calories: <%= total_calories %></h3>
 
       <h4>Over <%= total_meals %> Meals</h4>
 
-        <% if total_meals == 0 %>
-            <%= link_to 'Add Recipes', root_path, class: "btn btn-outline-dark" %>
-        <% else %>
-            <h2>Average Calories Per Meal: <%= total_calories / total_meals %></h2>
-            <%= link_to 'Add More Recipes', root_path, class: "btn btn-outline-dark" %>
-        <% end %>
+      <% if total_meals == 0 %>
+          <%= link_to 'Add Recipes', root_path, class: "btn btn-outline-dark" %>
+      <% else %>
+          <h2>Average Calories Per Meal: <%= total_calories / total_meals %></h2>
+          <%= link_to 'Add More Recipes', root_path, class: "btn btn-outline-dark" %>
+      <% end %>
 
       <%= link_to 'View Shopping List', shopping_lists_path, class: "btn btn-outline-dark" %>
     </div>
