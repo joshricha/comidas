@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
 
       redirect_to '/'
     else
-      redirect_to new_user_registration_path
+      redirect_to '/users/sign_in'
     end
   end
 
