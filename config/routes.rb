@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'shopping_list' => 'shopping_list/index'
 
+  # don't need both of these. Test
   get '/recipes/:id' => 'recipes#add'
   post '/recipes/:id' => 'recipes#add'
 
